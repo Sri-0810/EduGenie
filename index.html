@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduGenie — AI Learning Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="logo">🎓 EduGenie</div>
+      <h1>Learn smarter with your AI study companion.</h1>
+      <p>Ask questions, simplify concepts, create quizzes, summarize notes, and build learning paths.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card workspace">
+      <div class="task-grid">
+        <button class="task active" data-task="qa">💬 Q&amp;A</button>
+        <button class="task" data-task="explain">💡 Explain</button>
+        <button class="task" data-task="quiz">📝 Quiz</button>
+        <button class="task" data-task="summarize">📚 Summary</button>
+        <button class="task" data-task="learn">🧭 Learning Path</button>
+      </div>
+
+      <div class="form-area">
+        <label id="inputLabel" for="inputText">Ask a question</label>
+        <textarea id="inputText" placeholder="Example: What is photosynthesis?"></textarea>
+        <div class="actions">
+          <button id="sampleBtn" class="secondary">Use sample</button>
+          <button id="submitBtn" class="primary">Ask EduGenie</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="loading" class="card loading hidden">
+      <div class="spinner"></div>
+      <span>EduGenie is thinking…</span>
+    </section>
+
+    <section id="resultCard" class="card result hidden">
+      <div class="result-head">
+        <h2 id="resultTitle">Result</h2>
+        <button id="copyBtn" class="icon-btn" title="Copy result">📋</button>
+      </div>
+      <div id="result"></div>
+    </section>
+
+    <section class="features">
+      <div class="feature"><span>💬</span><h3>Ask</h3><p>Get clear academic answers.</p></div>
+      <div class="feature"><span>🧠</span><h3>Understand</h3><p>Break difficult ideas into simple steps.</p></div>
+      <div class="feature"><span>🎯</span><h3>Practice</h3><p>Generate quizzes and check your answers.</p></div>
+      <div class="feature"><span>🚀</span><h3>Progress</h3><p>Build a beginner-to-advanced learning path.</p></div>
+    </section>
+  </main>
+
+  <footer>EduGenie • FastAPI + Google Gemini</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
